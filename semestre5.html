@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportanet - Semestre 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/estilos.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/Logo.png">
+
+  <style>
+    /* Resumen del semestre 5 */
+    #resumen h3 {
+      color: #00C3DE;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    #resumen ul {
+      padding-left: 1.2rem;
+    }
+    #resumen li {
+      margin-bottom: 0.6rem;
+      line-height: 1.55;
+    }
+    .estado-card {
+      background-color: #FFFFFF;
+      color: #1A1A1A;
+      border-radius: 8px;
+      padding: 1.25rem;
+      height: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    .estado-card h3 {
+      font-size: 1.15rem;
+      color: #0E1735;
+    }
+    .estado-card ul {
+      padding-left: 1.1rem;
+      margin-bottom: 0;
+    }
+    .nota-equipo {
+      max-width: 700px;
+      margin: 0 auto 1.5rem auto;
+      color: #1A1A1A;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<!-- Encabezado principal -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+          <a class="navbar-brand" href="index.html">
+              <img src="img/Logo.png" alt="logo de búsqueda" width="35" height="35">Sportanet
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#resumen">Resumen</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#estado">Estado actual</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#pendiente">Pendiente</a></li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle active" href="#" id="semestreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Semestres
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="semestreDropdown">
+                          <li><a class="dropdown-item" href="semestre1.html">Semestre 1</a></li>
+                          <li><a class="dropdown-item" href="semestre2.html">Semestre 2</a></li>
+                          <li><a class="dropdown-item" href="semestre3.html">Semestre 3</a></li>
+                          <li><a class="dropdown-item" href="semestre4.html">Semestre 4</a></li>
+                          <li><a class="dropdown-item active" href="semestre5.html">Semestre 5</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Sección de Hero dentro del encabezado -->
+  <div class="hero text-center py-5">
+      <div class="container">
+          <h1 class="display-4">Semestre 5</h1>
+          <p class="lead">Seguridad del backend, eventos e inscripciones (en curso)</p>
+      </div>
+  </div>
+
+</header>
+
+<body>
+<main>
+
+<!-- Sección Equipo -->
+<section id="equipo" class="py-5 bg-light" aria-labelledby="equipo-title">
+    <div class="container">
+        <h2 id="equipo-title" class="text-center mb-3" style="color: #000000;">Equipo del semestre</h2>
+        <p class="nota-equipo">
+            Por ahora el proyecto está a cargo de dos integrantes, que se reparten el desarrollo del backend, la base de datos y la interfaz.
+        </p>
+        <div class="row justify-content-center text-center">
+            <article class="col-12 col-sm-6 col-md-4 mb-4">
+                <figure>
+                    <img src="img/Danilo.jpeg" alt="Danilo Jose Cantor Muñoz" class="team-img mb-2" width="150" height="150">
+                    <figcaption>
+                        <h5 class="integrante-nombre">Danilo Jose Cantor Muñoz</h5>
+                        <p class="integrante-rol">Programador</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="col-12 col-sm-6 col-md-4 mb-4">
+                <figure>
+                    <img src="img/Heyder2.jpeg" alt="Heyder Ivan Ramos Rodriguez" class="team-img mb-2" width="150" height="150">
+                    <figcaption>
+                        <h5 class="integrante-nombre">Heyder Ivan Ramos Rodriguez</h5>
+                        <p class="integrante-rol">Analista y Desarrollador de Base de Datos</p>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Resumen -->
+<section id="resumen" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-3" style="color: #ffffff;">Resumen del semestre</h2>
+        <p class="text-center mb-5">
+            En el quinto semestre convertimos la plataforma en una aplicación segura y funcional: cuentas con roles, gestión de eventos para organizadores e inscripciones para atletas.
+        </p>
+
+        <div class="row g-5">
+            <div class="col-12 col-md-5">
+                <h3>Temas clave</h3>
+                <ul>
+                    <li>Autenticación con JWT y autorización por roles</li>
+                    <li>Migraciones versionadas de la base de datos (MySQL) y pruebas de integración</li>
+                    <li>Validación de datos de entrada y manejo seguro de errores</li>
+                    <li>Base de datos de administración separada (SPN_AD)</li>
+                    <li>API REST de eventos e inscripciones</li>
+                    <li>Contenedores con Docker</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-7">
+                <h3>Avance del proyecto</h3>
+                <ul>
+                    <li>Inicio de sesión con JWT; la cuenta se comprueba en cada petición, así que una cuenta desactivada o eliminada pierde el acceso de inmediato</li>
+                    <li>API de usuarios protegida con permisos por rol y por propietario, y borrado lógico de cuentas</li>
+                    <li>Registro e inicio de sesión reforzados: datos validados antes de tocar la base de datos y errores sin detalles internos</li>
+                    <li>Registro como Atleta u Organizador</li>
+                    <li>Sistema de migraciones versionadas y pruebas de integración contra una base de datos real</li>
+                    <li>Línea de administración aparte: alta con un código de un solo uso y login con bloqueo tras cinco intentos fallidos</li>
+                    <li>Monitor de carga, limitador de peticiones y prueba de sobrecarga configurable</li>
+                    <li>API de eventos y página <code>events.html</code> conectada a la base de datos, con búsqueda, filtros, orden, paginación y detalle</li>
+                    <li>Gestión de eventos por parte de los organizadores: crear, editar, cancelar y finalizar</li>
+                    <li>Inscripciones de atletas con lista de espera y confirmación o rechazo por parte del organizador</li>
+                    <li>Perfil de usuario con foto y entorno de ejecución con Docker</li>
+                    <li>Suite de pruebas completa: 133 unitarias, 75 de integración y 30 de la base de administración</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Estado actual -->
+<section id="estado" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: #000000;">Estado actual del proyecto</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-5">
+                <div class="estado-card">
+                    <h3>Tecnologías</h3>
+                    <ul>
+                        <li>Frontend: HTML, CSS y JavaScript</li>
+                        <li>Backend: Node.js y Express 5</li>
+                        <li>Base de datos: MySQL con migraciones versionadas</li>
+                        <li>Seguridad: JWT y bcrypt</li>
+                        <li>Entorno: Docker</li>
+                        <li>Pruebas: ejecutor nativo de Node.js</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="estado-card">
+                    <h3>Decisiones de diseño</h3>
+                    <ul>
+                        <li>Los administradores viven en una base de datos aparte, no en la de usuarios</li>
+                        <li>No se guarda la IP de los administradores, solo fecha y hora de acceso</li>
+                        <li>Un administrador debe tener además una cuenta de Atleta aparte</li>
+                        <li>Un organizador puede publicar eventos sin verificación por ahora</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Pendiente -->
+<section id="pendiente" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: #ffffff;">Pendiente y próximos pasos</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <ul>
+                    <li>Pasarela y verificación de pagos: hoy las inscripciones a eventos con costo quedan pendientes de pago.</li>
+                    <li>Interfaz de administración y verificación en dos pasos (2FA).</li>
+                    <li>Límite de intentos en el inicio de sesión de usuarios y política de contraseñas.</li>
+                    <li>Restringir CORS para producción.</li>
+                    <li>Subida de imágenes para las portadas de eventos.</li>
+                    <li>Despliegue de la base de datos en Railway y del backend y el frontend en Render.</li>
+                    <li>Ampliar las pruebas de edición, cancelación, lista de espera, aprobación manual y pagos.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="mt-4">
+  <div class="container text-center">
+    <p>&copy; <span id="year"></span> Sportanet. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Script de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

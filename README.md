@@ -1,6 +1,6 @@
 # 🏆 Sports Event Management Platform – Portfolio
 
-Welcome to the portfolio of our **Sports Event Management Website Project**. This document presents the evolution of the project across **four semesters**, highlighting the technologies, concepts, and improvements implemented over time.
+Welcome to the portfolio of our **Sports Event Management Website Project**. This document presents the evolution of the project across **five semesters**, highlighting the technologies, concepts, and improvements implemented over time.
 
 ---
 
@@ -63,13 +63,12 @@ In this stage, we introduced backend logic and database management to make the a
 
 ---
 
-## 🚀 Semester 4 – Modern Web Development (NoSQL & REST APIs)
+## 🚀 Semester 4 – Modern Web Development (REST APIs)
 
 In the fourth semester, we adopted modern technologies to scale and enhance the application.
 
 **Key topics:**
 
-* NoSQL databases (e.g., MongoDB)
 * RESTful API development
 * Advanced JavaScript (ES6+)
 * Frontend-backend integration
@@ -78,10 +77,37 @@ In the fourth semester, we adopted modern technologies to scale and enhance the 
 **Project progress:**
 
 * REST API for managing sports events
-* Integration with NoSQL database
 * Dynamic frontend using JavaScript and APIs
 * Improved performance and scalability
 * Separation of frontend and backend architecture
+
+---
+
+## 🛠️ Semester 5 – Backend Security, Events & Registrations (in progress)
+
+The fifth semester (October – November 2026) focuses on turning the platform into a secure, working application. The project is currently handled by **two team members**: Danilo Cantor (programmer) and Heyder Ramos (analyst and database developer).
+
+**Key topics:**
+
+* JWT authentication and role-based authorization
+* Versioned database migrations (MySQL) and integration testing
+* Input validation and secure error handling
+* Separate administration database (SPN_AD)
+* Containerization with Docker
+
+**Project progress:**
+
+* JWT login with per-request account checks and a protected users API (role- and owner-based permissions, soft delete)
+* Hardened register/login with input validation and safe error handling
+* Account types: Athlete and Organizer
+* Versioned migration system and integration tests against a real MySQL database
+* Separate administration line (SPN_AD) with one-time sign-up code and lockout after failed attempts
+* Load monitoring, rate limiting and a configurable overload test
+* Events API and `events.html` connected to the database (search, filters, sorting, pagination, detail)
+* Event management for organizers and athlete registrations with waiting list
+* User profile picture and Docker setup
+
+**Pending:** payments, admin interface with 2FA, login rate limiting, image uploads and deployment (Railway + Render).
 
 ---
 
@@ -99,9 +125,9 @@ To develop a scalable and user-friendly platform that allows users to:
 ## 🛠️ Technologies Used
 
 * **Frontend:** HTML, CSS, JavaScript
-* **Backend:** Node.js (or similar)
-* **Databases:** SQL (early stages), NoSQL (MongoDB)
-* **Tools:** Git, REST APIs
+* **Backend:** Node.js, Express 5
+* **Databases:** MySQL
+* **Tools:** Git, REST APIs, JWT, Docker
 
 ---
 
